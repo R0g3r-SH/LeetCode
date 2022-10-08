@@ -49,8 +49,8 @@ def floodFill(image, sr, sc, color):
 
 image = [[0,3,0],[0,0,0]]
 sr = 0
-sc = 0
-color = 1
+sc = 1
+color = 3
 
 floodFill(image, sr, sc, color)
 
