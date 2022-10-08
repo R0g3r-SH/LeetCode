@@ -8,7 +8,7 @@ def recursiveDFS (image, sr,cs,color,rows, cols,target):
     elif(image[sr][cs] != target):
         return;
 
-    image[sr][sc] = color
+    image[sr][cs] = color
     
     recursiveDFS (image, sr-1,cs,color,rows, cols,target)
     recursiveDFS (image, sr+1,cs,color,rows, cols,target)
