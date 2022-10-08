@@ -1,0 +1,21 @@
+def sortedSquares(nums):
+    l= 0
+    r = len(nums)-1
+    out = [0]*len(nums)
+
+    for i in reversed(range(len(out))):
+
+        valr= abs(nums[r]) 
+        vall= abs(nums[l])
+                           
+        if valr > vall:
+            out[i]= valr*valr
+            r-=1
+        else:
+            out[i]= vall*vall
+            l+=1                    
+                           
+    return out
+            
+nums = [-7,-3,2,3,11]
+print(sortedSquares(nums))
