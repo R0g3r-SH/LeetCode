@@ -1,0 +1,26 @@
+def longestPalindrome(s):
+    map1 = {}
+    maxlen = 0
+    maxeven = False
+    for i in s:
+        if i not in map1:
+            map1[i] = 1
+        else:
+            map1[i] +=1
+
+    for i in map1.values():
+        #if is odd
+        if i % 2 == 0 :
+            maxlen +=i
+        else:
+            maxlen += i-1
+            maxeven = True
+            
+    if maxeven :
+        return maxlen +1
+    else: 
+         return maxlen
+
+s= "abccccdd"
+
+print(longestPalindrome(s))
