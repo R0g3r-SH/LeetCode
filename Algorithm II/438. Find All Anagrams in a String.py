@@ -21,4 +21,8 @@ def findAnagrams( s, p):
             res.append(l)
 
     return res
-            
+
+
+s = "cbaebabacd"
+p = "abc"
+print(findAnagrams(s,p))
